@@ -1,0 +1,61 @@
+{
+  "name": "nba-pick-em",
+  "version": "1.0.0",
+  "description": "Pick em",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/express_server/app.js",
+    "build": "webpack -d --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jneumann22/NBA-PICK-EM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jneumann22/NBA-PICK-EM/issues"
+  },
+  "homepage": "https://github.com/jneumann22/NBA-PICK-EM#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "@babel/runtime": "^7.3.1",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "nodemon": "^1.18.9",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-favicon": "0.0.14",
+    "react-image-lightbox": "^5.1.0",
+    "react-modal": "^3.8.1",
+    "react-pdf": "^4.0.2",
+    "react-scroll": "^1.7.11",
+    "terser": "^3.14.1",
+    "webpack-cli": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.0",
+    "babel-loader": "^8.0.2",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
+  }
+}
