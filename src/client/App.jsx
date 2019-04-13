@@ -19,11 +19,17 @@ class App extends React.Component {
         this.countPoints2 = this.countPoints2.bind(this)
         this.countPoints3 = this.countPoints3.bind(this)
         this.countPoints4 = this.countPoints4.bind(this)
+        this.countWins1 = this.countWins1.bind(this)
+        this.countWins2 = this.countWins2.bind(this)
+        this.countWins3 = this.countWins3.bind(this)
+        this.countWins4 = this.countWins4.bind(this)
+        this.countTotal = this.countTotal.bind(this)
         
     }
    
     countPoints1(e) {
         this.setState({team1 : e.target.value});
+        console.log(this.state.team1)
     }
 
      countPoints2(e) {
@@ -38,8 +44,33 @@ class App extends React.Component {
         this.setState({team4 : e.target.value});
     }
 
- 
+ countWins1(e) {
+     this.setState({team1w: e.target.value})
+     console.log(this.state.team1w);
+ }
 
+ countWins2(e) {
+    this.setState({team2w: e.target.value})
+}
+
+countWins3(e) {
+    this.setState({team3w: e.target.value})
+}
+
+countWins4(e) {
+    this.setState({team4w: e.target.value})
+}
+
+countTotal() {
+    console.log('i was clicked')
+    let team1Total = this.state.team1 * this.state.team1w;
+    let team2Total = this.state.team2 * this.state.team2w;
+    let team3Total = this.state.team3 * this.state.team3w;
+    let team4Total = this.state.team4 * this.state.team4w;
+    let total = team1Total + team2Total + team3Total +team4Total;
+    this.setState({totalPoints: total})
+
+}
 
     render() {
         return (
@@ -131,35 +162,41 @@ class App extends React.Component {
 
             </div>
             <div className = 'wins'> 
-            <select>
+            <select onChange={this.countWins1}>
+            <option value="1">Select Number of Wins</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value='4'>4</option>
             </select>
 
-            <select>
+            <select onChange={this.countWins2}>>
+            <option value="1">Select Number of Wins</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value='4'>4</option>
             </select>
 
-            <select>
+            <select onChange={this.countWins3}>>
+            <option value="1">Select Number of Wins</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value='4'>4</option>
             </select>
 
-            <select>
+            <select onChange={this.countWins4}>>
+            <option value="1">Select Number of Wins</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value='4'>4</option>
             </select>
             </div>
-
+            <div>
+                <button onClick = {this.countTotal}>Get Point Total</button>
+            </div>
 
             <div className = 'pointHolder'>
             <h1>
@@ -168,6 +205,8 @@ class App extends React.Component {
                 {this.state.totalPoints}
                 <br></br>
                {this.state.team1}
+               <br/>
+               {this.state.team1w}
                  </h1>
                 
             
